@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Descret Math</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header ">
+        <img src="RUPP_logo.png" class="logo">
+
+        <div class="Item-inheader">
+            <h1>Encryption & Decryption Demo</h1>
+            <p>ITE Year 2 – Cipher Project</p>
+            <h2>Group : Muaw</h2>
+        </div>
+        <div class="member">
+            <a href="" onclick="myFunction()">member</a>
+        </div>
+    </div>
+
+    
+    <section class="practice">
+        <div class="card">
+            <h2><u>Affine Cipher (Concept)</u></h2>
+            <p class="font tap">"The page is a student/academic demonstration project about classical and modern cryptography. It was submitted to a lecturer (Mr. Lim Seyha) in April 2026 by Mr. Ung Sereysopea as part of an Information Technology or Mathematics course at the Royal University of Phnom Penh."</p><br>
+            <p class="font tap">It is a substitution cipher using mathematics.</p> 
+            <br>
+            <p class="font tap">It explains several encryption methods, shows how they work, and includes interactive parts (like a demo tool on the page) for encrypting and decrypting text.</p>
+        </div>
+        
+    </section>
+    <section class="practice">
+        <div class="card">
+            <h2><a href="">1. Classical Cryptography</a></h2><br>
+            <p>This section covers early methods used to hide information. These are simple compared to modern cryptography but are historically important and help learn core concepts.</p><br>
+            <h3><u>Caesar Cipher</u></h3>
+            <p >One of the oldest cipher systems, used by Julius Caesar.</p><br>
+            <p>It shifts each letter of the alphabet by a fixed number (classically 3) to turn plaintext into ciphertext.</p><br>
+            <p>Example: A → D, B → E, etc.</p><br>
+            <p>This type of cipher is a substitution cipher, meaning each original character is replaced with another. Though simple, it introduces core ideas like encryption, decryption, and keys — all essential to more advanced systems.</p><br>
+            <h3><u> General Shift Cipher</u></h3><br>
+            <p>Like Caesar, but the shift value k can be any number, not just 3.</p><br>
+            <p>You choose the key (the shift amount), and that key controls how text is transformed.</p><br>
+            <h3><u> Affine Cipher</u></h3><br>
+            <p>A slightly more complex substitution cipher.</p><br>
+            <p>It uses two keys — one to multiply and one to shift — using the formula:</p><br>
+            <p>E(x) = (a * x + b) mod 26</p><br>
+            <p>where “a” and “b” are keys and “x” is the numeric letter value.</p><br>
+            <h3><u>Transposition Cipher</u></h3><br>
+            <p>Instead of replacing letters with other letters (like substitution ciphers), it rearranges the letters.</p><br>
+            <p>It moves the positions of characters but keeps the letters themselves unchanged.</p><br>
+            <p>Transposition ciphers teach an important concept: encryption doesn’t always change characters — it can change their order.</p><br>
+        </div>
+        
+    </section>
+    <section class="practice-in-btn">
+        <div class="card-in-btn">
+            <h2> <a href="">Caesar Cipher</a></h2>
+            <p class="desc">
+                The Caesar cipher shifts each letter by a fixed number of positions in the alphabet.
+            </p>
+
+        <div class="row">
+            <div class="field">
+                <label>Text</label>
+                <textarea id="caesarText" placeholder="Enter your text here..."></textarea>
+            </div>
+
+            <div class="field">
+                <label>Shift</label>
+                <input type="number" id="shift" value="3" />
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn encrypt" onclick="encryptCaesar()">Encrypt</button>
+            <button class="btn decrypt" onclick="decryptCaesar()">Decrypt</button>
+            </div>
+
+            <div class="field">
+                <label>Result</label>
+                <textarea id="caesarResult" placeholder="Result will appear here..."></textarea>
+            </div>
+        </div>
+    </section>
+    <section class="practice">
+        <div class="card">
+            <h2><a href="">2. Modern Cryptography: RSA</a></h2><br>
+            <p>The page includes a section on RSA cryptography, a real modern encryption system that’s widely used today.</p><br>
+            <h3><u>What RSA Is</u></h3><br>
+            <p>Asymmetric encryption: unlike Caesar or affine ciphers, RSA uses different keys for encrypting and decrypting.</p><br>
+            <p>Public key = used by anyone to encrypt a message.</p><br>
+            <p>Private key = used by the receiver to decrypt it.</p><br>
+            <p>RSA is secure because it’s hard to factor very large numbers into primes.</p><br>
+            <h3><u> Why RSA Matters</u></h3><br>
+            <p>Modern internet security — like HTTPS, VPNs, and secure email — depends on asymmetric systems like RSA. It’s a huge leap from classic ciphers because it protects real-world data.</p>
+        </div>
+    </section>
+   
+    <footer>
+        <p>@Created by: Cheng virak and team | 2026</p>
+    </footer>
+
+    <script src="control.js"></script>
+    <script src="menber.js"></script>
+</body>
+</html>   

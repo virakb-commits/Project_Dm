@@ -1,0 +1,197 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    background-image: url(uni.webp);
+    font-family: Arial, sans-serif; 
+    margin:0; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid white;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.header .logo {
+    width: 100px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.header .title {
+    text-align: center;
+}
+.header .member{
+    margin-right: 10px;
+}
+.header .member a{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.header .member a:hover{
+    color: #c1c0ff;
+}
+.practice {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.practice .card .font{
+    font-family: 'Playwrite NZ Basic', sans-serif;
+}
+
+.practice .card p{
+    padding-left: 40px;
+}
+
+.practice .card h3{
+    padding-left: 20px;
+}
+.practice-in-btn {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.card {
+    text-align: left;
+    margin-bottom: 5px;
+    width: 95%;
+    max-width: 700px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    color: #fff;
+    font-family: "Playfair Display", serif;
+}
+.card-in-btn {
+    width: 95%;
+    max-width: 700px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    color: #fff;
+    font-family: "Playfair Display", serif;
+}
+
+.card h2 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.desc {
+    text-align: center;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+/* Textarea improvements */
+textarea {
+    resize: none;
+    min-height: 110px;
+}
+
+/* Optional: nicer focus effect */
+textarea:focus,
+input:focus {
+    outline: 2px solid #4da3ff;
+}
+
+/* Placeholder look */
+textarea::placeholder,
+input::placeholder {
+    color: #999;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.encrypt {
+    background: #2196f3;
+}
+
+.decrypt {
+    background: #4caf50;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+
+}
+
+.card-in-btn a{
+    color: #ffffff;
+}
+footer{
+    color: #ffffff;
+}
