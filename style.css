@@ -1,24 +1,30 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --accent: #0ea5e9;
+    --bg: #030712;
+}
 body { 
-    background-image: url(uni.webp);
+    background-color: var(--bg);
     font-family: Arial, sans-serif; 
     margin:0; 
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    background-image: radial-gradient(circle at 50% -20%, #1e293b, #030712);
 }
 .header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-
+    position: relative;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
     border: 1px solid white;
@@ -32,6 +38,9 @@ body {
     position: relative;
 }
 
+.header .Item-inheader{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 .header .logo {
     width: 100px;
     height: auto;
@@ -74,6 +83,10 @@ body {
     margin: 40px 0;
 }
 
+.font-h2 h2,h3{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 .card {
     text-align: left;
     margin-bottom: 5px;
@@ -86,6 +99,10 @@ body {
     box-shadow: 0 0 15px rgba(255,255,255,0.2);
     color: #fff;
     font-family: "Playfair Display", serif;
+
+}
+.font-h2 a{
+    color: #fff;
 }
 .card-in-btn {
     width: 95%;
@@ -138,6 +155,9 @@ input {
     font-size: 1rem;
     box-sizing: border-box;
     line-height: 1.4;
+    background-color: var(--bg);
+    color: #fff;
+    
 }
 
 /* Textarea improvements */
@@ -194,4 +214,79 @@ input::placeholder {
 }
 footer{
     color: #ffffff;
+}
+
+.member-link {
+  color: #4da3ff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* Overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99998;
+}
+
+/* Popup Box */
+.member-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000000;
+  color: #ffffff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  z-index: 99999; /* TOP OF EVERYTHING */
+  width: 400px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.member-box h3,p {
+  margin-top: 0;
+
+}
+
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.practice .card .img-qr {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+    
+}
+
+/*.member-box span{
+    padding-inline: 15px;
+    position: absolute;
+    top: 90%;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s;
+    opacity: 0;
+    overflow: hidden;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;number of lines to show 
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}*/
+.member-box .name:hover span{
+    top: 58%;
+    opacity: 0.9;
 }

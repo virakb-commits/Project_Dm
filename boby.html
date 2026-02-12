@@ -16,13 +16,35 @@
             <p>ITE Year 2 – Cipher Project</p>
             <h2>Group : Muaw</h2>
         </div>
-        <div class="member">
-            <a href="" onclick="myFunction()">member</a>
-        </div>
-    </div>
-
+        <span class="member-link" onclick="openMember()">Member</span>
     
-    <section class="practice">
+    </div>
+    <div id="overlay" onclick="closeMember()"></div>
+    <!-- Member Popup -->
+    <div id="memberBox" class="member-box">
+        <span class="close-btn" onclick="closeMember()">✖</span>
+        <h3>Members</h3>
+        <div>
+            <p>1.Cheng Virak</p>
+        </div>
+        <div>
+            <p>2.Khun Kim Heng</p>
+        </div>
+        <div>
+            <p>3.Chun Savann</p>
+        </div>
+        <div>
+            <p>4.Lang Kim hong</p>
+        </div>
+        <div>
+            <p>5.Korng Seng Hong</p>
+        </div>
+        <div>
+            <p>6.Seang Bun Seth</p>
+        </div>
+        
+    </div>
+    <section class="practice font-h2">
         <div class="card">
             <h2><u>Affine Cipher (Concept)</u></h2>
             <p class="font tap">"The page is a student/academic demonstration project about classical and modern cryptography. It was submitted to a lecturer (Mr. Lim Seyha) in April 2026 by Mr. Ung Sereysopea as part of an Information Technology or Mathematics course at the Royal University of Phnom Penh."</p><br>
@@ -32,7 +54,7 @@
         </div>
         
     </section>
-    <section class="practice">
+    <section class="practice font-h2">
         <div class="card">
             <h2><a href="">1. Classical Cryptography</a></h2><br>
             <p>This section covers early methods used to hide information. These are simple compared to modern cryptography but are historically important and help learn core concepts.</p><br>
@@ -56,7 +78,7 @@
         </div>
         
     </section>
-    <section class="practice-in-btn">
+    <section class="practice-in-btn font-h2">
         <div class="card-in-btn">
             <h2> <a href="">Caesar Cipher</a></h2>
             <p class="desc">
@@ -86,7 +108,105 @@
             </div>
         </div>
     </section>
-    <section class="practice">
+
+    <section class="practice-in-btn font-h2">
+        <div class="card-in-btn">
+            <h2> <a href="">General Shift Cipher</a></h2>
+            <p class="desc">
+                The Caesar cipher shifts each letter by a fixed number of positions in the alphabet.
+            </p>
+
+        <div class="row">
+            <div class="field">
+                <label>Text</label>
+                <textarea id="shiftText" placeholder="Enter your text here..."></textarea>
+            </div>
+
+            <div class="field">
+                <label>Shift</label>
+                <input type="number" id="shiftKey" value="3" />
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn encrypt" onclick="encryptShift()">Encrypt</button>
+            <button class="btn decrypt" onclick="decryptShift()">Decrypt</button>
+            </div>
+
+            <div class="field">
+                <label>Result</label>
+                <textarea id="shiftResult" placeholder="Result will appear here..."></textarea>
+            </div>
+        </div>
+    </section>
+
+     <section class="practice-in-btn font-h2">
+        <div class="card-in-btn">
+            <h2> <a href="">Affine Cipher</a></h2>
+            <p class="desc">
+                The Caesar cipher shifts each letter by a fixed number of positions in the alphabet.
+            </p>
+
+        <div class="row">
+            <div class="field">
+                <label>Text</label>
+                <textarea id="affineText" placeholder="Enter your text here..."></textarea>
+            </div>
+
+            <div class="field">
+                <label>Shift</label>
+                <input type="number" id="keyA" value="" placeholder="key A"/>
+                <br>
+                <input type="number" id="keyB" value="" placeholder="Key B" />
+            </div>
+            
+        </div>
+
+        <div class="buttons">
+            <button class="btn encrypt" onclick="encryptAffine()">Encrypt</button>
+            <button class="btn decrypt" onclick="decryptAffine()">Decrypt</button>
+            </div>
+
+            <div class="field">
+                <label>Result</label>
+                <textarea id="affineResult" placeholder="Result will appear here..."></textarea>
+            </div>
+        </div>
+    </section>
+
+     <section class="practice-in-btn font-h2">
+        <div class="card-in-btn">
+            <h2> <a href="">Transposition Cipher</a></h2>
+            <p class="desc">
+                The Caesar cipher shifts each letter by a fixed number of positions in the alphabet.
+            </p>
+
+        <div class="row">
+            <div class="field">
+                <label>Text</label>
+                <textarea id="transText" placeholder="Enter your text here..."></textarea>
+            </div>
+
+            <div class="field">
+                <label>Shift</label>
+                <input type="number" id="transKey" value="3" placeholder="key"/>
+            </div>
+            
+        </div>
+
+        <div class="buttons">
+            <button class="btn encrypt" onclick="encryptTrans()">Encrypt</button>
+            <button class="btn decrypt" onclick="decryptTrans()">Decrypt</button>
+            </div>
+
+            <div class="field">
+                <label>Result</label>
+                <textarea id="transResult" placeholder="Result will appear here..."></textarea>
+            </div>
+        </div>
+    </section>
+
+    <section class="practice font-h2">
         <div class="card">
             <h2><a href="">2. Modern Cryptography: RSA</a></h2><br>
             <p>The page includes a section on RSA cryptography, a real modern encryption system that’s widely used today.</p><br>
@@ -99,12 +219,20 @@
             <p>Modern internet security — like HTTPS, VPNs, and secure email — depends on asymmetric systems like RSA. It’s a huge leap from classic ciphers because it protects real-world data.</p>
         </div>
     </section>
+    <section class="practice font-h2">
+        <div class="card">
+            <img src="photo_2026-02-12_16-03-39.jpg" alt="" class="img-qr">
+        </div>
+    </section>
    
     <footer>
         <p>@Created by: Cheng virak and team | 2026</p>
     </footer>
 
-    <script src="control.js"></script>
+    <script src="Caesar.js"></script>
     <script src="menber.js"></script>
+    <script src="general.js"></script>
+    <script src="affine.js"></script>
+    <script src="transposition.js"></script>
 </body>
 </html>  
